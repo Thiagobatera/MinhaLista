@@ -7,4 +7,5 @@
     <string name="action_lista">Listas</string>
     <string name="title_activity_produtos">Produtos</string>
     <string name="title_activity_lista">Lista</string>
+    <string name="titulo_lista_produtos">Lista de produtos</string>
 </resources>
