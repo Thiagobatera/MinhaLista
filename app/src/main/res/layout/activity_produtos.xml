@@ -7,8 +7,9 @@
     tools:context="br.com.nonilton.minhalista.activitys.Produtos">
 
     <LinearLayout
+        android:id="@+id/layoutLista"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="430dp"
         android:orientation="vertical">
     <TextView android:text="@string/titulo_lista_produtos" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -18,8 +19,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
         </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/layoutLista"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ballnumbers"
+            android:layout_marginRight="30dp"
+            />
     </LinearLayout>
 
 </RelativeLayout>

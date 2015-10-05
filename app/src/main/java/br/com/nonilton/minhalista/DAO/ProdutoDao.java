@@ -1,8 +1,12 @@
 package br.com.nonilton.minhalista.DAO;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.nonilton.minhalista.Entidades.Produto;
 
@@ -34,6 +38,17 @@ public class ProdutoDao {
     }
 
     public int excluir(Produto produto){
-        return this.bd.delete("produto","id=?",new String[]{String.valueOf(produto.getId())} );
+        return this.bd.delete("produto", "id=?", new String[]{String.valueOf(produto.getId())});
+    }
+
+    public List<Produto> getLista(){
+        List<Produto> lista = new ArrayList<>();
+        Cursor c = this.bd.rawQuery("select * from produto", null);
+        while (c.moveToNext()){
+            Produto p = new Produto(c.getLong(0), c.getString(1));
+            lista.add(p);
+        }
+        c.close();
+        return lista;
     }
 }
