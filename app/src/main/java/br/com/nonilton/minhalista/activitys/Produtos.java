@@ -4,7 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
+import br.com.nonilton.minhalista.Adapters.ProdutoAdapter;
+import br.com.nonilton.minhalista.Banco.Banco;
+import br.com.nonilton.minhalista.DAO.ProdutoDao;
 import br.com.nonilton.minhalista.R;
 
 public class Produtos extends AppCompatActivity {
@@ -13,6 +17,10 @@ public class Produtos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produtos);
+        ProdutoDao produtoDao = new ProdutoDao(new Banco(this).AbreBanco());
+
+        ListView listView = (ListView) findViewById(R.id.lista_produtos);
+        listView.setAdapter(new ProdutoAdapter(this, produtoDao.getLista()));
     }
 
     @Override
