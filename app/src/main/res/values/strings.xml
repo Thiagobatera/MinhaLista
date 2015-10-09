@@ -8,4 +8,9 @@
     <string name="title_activity_produtos">Produtos</string>
     <string name="title_activity_lista">Lista</string>
     <string name="titulo_lista_produtos">Lista de produtos</string>
+    <string name="bt_cancelar">Cancelar</string>
+    <string name="bt_confirmar">Confirmar</string>
+    <string name="titulo_dialogo_cad_produto">Cadastro de produto</string>
+    <string name="bt_excluir">Excluir</string>
+    <string name="bt_alterar">Alterar</string>
 </resources>

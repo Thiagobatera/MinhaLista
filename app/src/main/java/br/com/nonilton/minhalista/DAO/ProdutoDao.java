@@ -18,7 +18,7 @@ public class ProdutoDao {
     private ContentValues cv;
 
     private void preencher(Produto produto){
-        this.cv.put("id", produto.getId());
+        //this.cv.put("id", produto.getId());
         this.cv.put("nome", produto.getNome());
     }
 
