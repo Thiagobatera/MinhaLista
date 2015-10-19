@@ -23,4 +23,12 @@ public class Produto {
     public String getNome() {
         return nome;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
